@@ -1,8 +1,8 @@
 //index.tsx
-import Slide from "../components/UI/main-slide";
+import Section01 from "../components/UI/section01";
 const HomePage = ()=>{
     return <>
-        <Slide/>
+        <Section01/>
     </>
 }
 

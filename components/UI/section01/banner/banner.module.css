@@ -1,0 +1,28 @@
+.bannerBox{
+    width:100%;
+    position:absolute;
+    bottom:(18rem);
+}
+.bannerContainer{
+    /* width:0%; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 2.5rem ;
+}
+.bannerItem{
+    width:27.5rem;
+    padding:3rem 0;
+    text-align: center;
+    /* line-height:5rem; */
+    background-color: #fff;
+    border-radius:12px;
+    box-shadow: 1px 5px 10px 1px rgba(195, 195, 195, 0.3);
+    font-size: 1.5rem;
+    transition:ease-in-out .1s;
+
+}
+.bannerItem:hover{
+    padding:2.9rem 0;
+    border:2px solid #d21c1c;
+}
