@@ -1,5 +1,6 @@
 import styles from './banner.module.css';
 import Image from 'next/image';
+import LoginContainer from "./login";
 interface bannerListType {
     id : string,
     title : string,
@@ -15,11 +16,12 @@ const Banner = ()=>{
         <ul className={styles.bannerContainer}>
             {bannerList.map(item => {
                 return <li key={item.id} className={styles.bannerItem}>
-                    <span><Image src={item.src} alt={`${item.title}이미지`} width={50} height={60}/></span>
+                    <span><Image src={item.src} alt={`${item.title}이미지`} width={60} height={60}/></span>
                     <p>{item.title}</p>
                 </li>
             })}
         </ul>
+        <LoginContainer/>
     </div>
 };
 export default Banner;

@@ -1,7 +1,7 @@
 .bannerBox{
     width:100%;
     position:absolute;
-    bottom:(18rem);
+    bottom:0;
 }
 .bannerContainer{
     /* width:0%; */
@@ -25,4 +25,5 @@
 .bannerItem:hover{
     padding:2.9rem 0;
     border:2px solid #d21c1c;
+    box-shadow: 1px 5px 10px 1px rgba(53, 53, 53, 0.3);
 }
