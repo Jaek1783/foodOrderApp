@@ -1,8 +1,9 @@
 //index.tsx
+import Slide from "../components/UI/main-slide";
 const HomePage = ()=>{
-    return <div>
-        {/* <h1>Hello World</h1> */}
-    </div>
+    return <>
+        <Slide/>
+    </>
 }
 
 export default HomePage;

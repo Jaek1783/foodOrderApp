@@ -1,11 +1,12 @@
 .headerContainer{
     display:flex;
     align-items: center;
-    border-bottom:.5px solid #e4e4e4;
+    /* border-bottom:.5px solid #e4e4e4; */
     position:fixed;
     width:100%;
-    z-index: 999;
-    background-color: #fff;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.9);
+    padding:0 2rem;
 }
 /* .headerContainer>nav:hover{
     background-color: #e4e4e4;
@@ -19,9 +20,10 @@
 
 .headerManuList>li{
     padding:2.2rem 0;
+    z-index: 9999;
 }
 .headerManuList>li>a{
-    padding:2.3rem;
+    padding:2.2rem;
 }
 .headerManuList>li>a:hover{
     cursor: pointer;
@@ -68,7 +70,7 @@
     position: absolute;
     display: inline-block;
     width:25px;
-    height:2.5px;
+    height:2px;
     background-color: #363636;
 }
 .hamburgerBar>span:nth-child(1){

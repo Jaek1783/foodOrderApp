@@ -6,7 +6,7 @@ const Header = ({list, setTitle, subTitleRef, title})=>{
     const handleMouseOver = (id) => {
         setTitle(id)
     }
-    return  <div className={styles.headerContainer}>
+    return  <header className={styles.headerContainer}>
                 <h1><Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35}/></h1>
                 <nav>
                     <ul className={styles.headerManuList}>
@@ -35,7 +35,7 @@ const Header = ({list, setTitle, subTitleRef, title})=>{
                 </div>
                 {title !== 'm2' ? <SubTitle list={list} title={title} subTitleRef={subTitleRef} setTitle={setTitle}/> :''}
                 
-            </div>
+            </header>
     
 };
 export default Header;

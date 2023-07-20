@@ -21,9 +21,9 @@ const Layout = ({children})=>{
         {id:'m4',title : '단체주문', subTitle:[{manu:'단체 배달'}, {manu:'모바일 상품권(단체/기업)'}, {manu:'지류 상품권'}, {manu:null},{manu:null}]},
         {id:'m5',title : '창업안내', subTitle:[{manu:null}, {manu:null}, {manu:null}, {manu:null},{manu:'창업문의'}]},
     ]
-    return <header>
+    return <>
         <Header list={ManuList} title={title} setTitle={setTitle} subTitleRef={subTitleRef}/>
         <main>{children}</main>
-    </header>
+    </>
 };
 export default Layout;
