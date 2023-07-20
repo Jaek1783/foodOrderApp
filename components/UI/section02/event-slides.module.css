@@ -1,0 +1,12 @@
+.eventSlidesContainer{
+    width:700px;
+    height:500px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+.eventSlidesContainer>li{
+    transition: all ease-in-out .5s;
+    position: absolute;
+}

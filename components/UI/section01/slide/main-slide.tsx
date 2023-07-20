@@ -1,5 +1,6 @@
 import styles from './main-slide.module.css'
 import { useEffect, useRef, useState } from "react";
+import Image from 'next/image';
 interface slidesListType {
     id:string,
     src : string,
@@ -39,6 +40,37 @@ useEffect(()=>{
         },300);
     }
 },[activeIdx]);
+
+const nextBtnClickHandler = (e)=>{
+    e.preventDefault();
+    if(indexRef.current !== slidesList.length){
+        setActiveIdx(indexRef.current += 1);
+        slidesRef.current.style.left=-activeIdx*100+'%';
+        slidesRef.current.style.transition = "all .3s ease-in-out";
+    }
+    if(indexRef.current === slidesList.length){
+        slidesRef.current.style.transition = "none";
+        slidesRef.current.style.left= -100+'%';
+        setTimeout(()=>{
+            setActiveIdx(indexRef.current = 1);
+        },300);
+    }
+}
+const prevBtnClickHandler = (e)=>{
+    e.preventDefault();
+    if(indexRef.current !== slidesList.length){
+        setActiveIdx(indexRef.current -= 1);
+        slidesRef.current.style.left=activeIdx*100+'%';
+        slidesRef.current.style.transition = "all .s ease-in-out";
+    }
+    if(indexRef.current === 0){
+        slidesRef.current.style.transition = "none";
+        slidesRef.current.style.left= -500+'%';
+        setTimeout(()=>{
+            setActiveIdx(indexRef.current = 5);
+        },300);
+    }
+}
     return <div className={styles.slidesContainer}>
             <ul ref={slidesRef}>
                 {slidesList.map((list, index)=>{
@@ -51,6 +83,11 @@ useEffect(()=>{
                         </li>
                 })}
             </ul>
+            <div className={styles.arrowBtn}>
+                <button className={styles.left} onClick={prevBtnClickHandler}><Image src={'/icon/left.png'} alt='화살표' width={60} height={60}/></button>
+                <button className={styles.right} onClick={nextBtnClickHandler}><Image src={'/icon/right.png'} alt='화살표' width={60} height={60}/></button>
+                <span>{indexRef.current === 0 ?  4 : indexRef.current > 4 ? 1 : `${indexRef.current}`}{ ` / ${slidesList.length-2} `}</span>
+            </div>
         </div>
 };
 export default Slide;
