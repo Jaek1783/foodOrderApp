@@ -1,6 +1,6 @@
-import Slide from "../UI/section01/slide/main-slide";
-import Banner from "./section01/banner/banner";
-import styles from './section01.module.css';
+import styles from "./section01.module.css";
+import Slide from "./slide/main-slide";
+import Banner from "./banner/banner";
 const Section01 = ()=>{
     return <section className={styles.section01}>
                 <Slide/>

@@ -1,0 +1,23 @@
+.loopBox{
+    width:100%;
+}
+.loopContainer{
+    height:32rem;
+    position: relative;
+    overflow: hidden;
+
+}
+.loopSlides{
+    height:31.5rem;
+    position:absolute;
+    right:0;
+    top:-350px;
+}
+.loopSlides>li{
+    margin-bottom:20px;
+}
+
+.loopSlides>li>img{
+    border-radius:15px;
+    box-sizing: content-box;
+}
