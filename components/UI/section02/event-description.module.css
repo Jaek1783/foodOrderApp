@@ -3,7 +3,6 @@
 }
 .descContainer{
     width:20rem;
-    /* margin-right:5rem; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -11,7 +10,7 @@
     top:10px;
 }
 .descContainer>dt{
-    font-size:1.78rem;
+    font-size:2rem;
     font-weight: bold;
     padding-bottom :1.5rem;
 }

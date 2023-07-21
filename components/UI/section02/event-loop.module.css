@@ -10,7 +10,7 @@
 .loopSlides{
     height:31.5rem;
     position:absolute;
-    right:0;
+    right:2rem;
     top:-350px;
 }
 .loopSlides>li{

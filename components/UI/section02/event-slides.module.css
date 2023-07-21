@@ -6,9 +6,8 @@
     box-shadow: -3px 5px 25px 3px rgba(0,0,0,0.2);
     overflow: hidden;
     top:0;
-    left:42%;
+    left:35%;
 }
 .eventSlidesContainer>li{
-    /* transition-duration: 300ms; */
     position: absolute;
 }

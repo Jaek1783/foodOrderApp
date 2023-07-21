@@ -5,8 +5,8 @@ const EventDescription = ({eventList, activeIdx})=>{
             return <dl key={index} 
                 className={styles.descContainer} 
                 style={{opacity:index === activeIdx ? '1' : '0' }}>
-                <dt>{list.desc}</dt>
-                <dd>{list.span}</dd>
+                <dt><pre>{list.desc}</pre></dt>
+                <dd><pre>{list.span}</pre></dd>
                 <dd className={styles.descBtn}><button>자세히보기</button></dd>
             </dl>
         })}
