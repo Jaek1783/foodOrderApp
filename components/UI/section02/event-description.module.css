@@ -1,0 +1,25 @@
+.descBox{
+    position: relative;
+}
+.descContainer{
+    width:20rem;
+    /* margin-right:5rem; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top:10px;
+}
+.descContainer>dt{
+    font-size:1.78rem;
+    font-weight: bold;
+    padding-bottom :1.5rem;
+}
+.descContainer>dd{
+    font-size:1.5rem;
+    font-weight:300;
+}
+.descBtn>button{
+    font-size: 1rem;
+    padding-top:2.5rem;
+}

@@ -1,5 +1,7 @@
 import styles from './section02.module.css';
 import EventSlides from './event-slides';
+import EventDescription from './event-description';
+import { useState } from 'react';
 interface eventListType {
     id:string,
     title,
@@ -15,8 +17,10 @@ const Section02 = ()=>{
         {id : 'e3', title:'event03', src:'/assets/event03.png', desc:'피자헛 제휴할인 모아보기', span:'통신사, 카드사 할인 및 적립 안내'},
         {id : 'e4', title:'event04', src:'/assets/event04.png', desc:'피자헛 창업안내&문의', span:'피자헛 가맹점주님을 모십니다.'},
     ];
+    const [activeIdx, setActiveIdx] = useState<number>(0);
     return <section className={styles.section02}>
-        <EventSlides eventList={eventList}/>
+        <EventDescription eventList={eventList} activeIdx={activeIdx}/>
+        <EventSlides eventList={eventList} activeIdx={activeIdx} setActiveIdx={setActiveIdx}/>
     </section>
 };
 export default Section02;
