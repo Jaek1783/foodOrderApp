@@ -3,11 +3,11 @@ import { useState, useRef} from "react";
 interface HeaderType {
     id : string,
     title : string,
-    subTitle : [
-        {manu : string},
-        {manu : string},
-        {manu : string},
-        {manu : string},
+    subTitle ?: [
+        {manu ?: string},
+        {manu ?: string},
+        {manu ?: string},
+        {manu ?: string},
         {manu : string},
     ]
 }

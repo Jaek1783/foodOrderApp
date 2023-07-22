@@ -33,7 +33,7 @@ const Header = ({list, setTitle, subTitleRef, title})=>{
                         </li>
                     </ul>
                 </div>
-                {title !== 'm2' ? <SubTitle list={list} title={title} subTitleRef={subTitleRef} setTitle={setTitle}/> :''}
+                <SubTitle list={list} title={title} subTitleRef={subTitleRef} setTitle={setTitle}/>
                 
             </header>
     

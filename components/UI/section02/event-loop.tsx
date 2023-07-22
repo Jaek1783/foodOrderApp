@@ -5,7 +5,6 @@ const EventLoop = ({eventList, activeIdx, setActiveIdx})=>{
     const loopRef = useRef(null);
 
     useEffect(()=>{
-        console.log(activeIdx, eventList.length-2)
         if(activeIdx !== eventList.length-1){
             loopRef.current.style.top=- (activeIdx*175) +'px';
             loopRef.current.style.transition = "all .4s ease-in-out";
