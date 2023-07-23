@@ -6,7 +6,7 @@ const EventSlides = ({eventList, activeIdx, setActiveIdx})=>{
     const nextSlide = () => {
         setActiveIdx((prevIndex) => (prevIndex + 1) % eventList.length);
       };
-    const intervalTime = 5000;
+    const intervalTime = 6000;
 useEffect(() => {
 const timer = setInterval(nextSlide, intervalTime);
 

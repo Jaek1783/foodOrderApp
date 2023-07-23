@@ -25,7 +25,7 @@ console.log(activeIdx)
     useEffect(()=>{
         if(activeIdx !== eventList.length-1){
             loopRef.current.style.top=- (activeIdx*175) +'px';
-            loopRef.current.style.transition = "all .4s ease-in-out";
+            loopRef.current.style.transition = "all .5s ease-in-out";
         }
         if(activeIdx === eventList.length-2){
             loopRef.current.style.top= - 175 +'px';
