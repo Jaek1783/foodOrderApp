@@ -18,7 +18,7 @@ return () => clearInterval(timer);
                 <li key={index} 
                 style={{
                     opacity: index === activeIdx ? '1' : '0',
-                    transition: activeIdx > 2 ? 'all ease-in-out .5s' : 'none'
+                    transition: activeIdx > 2  ? activeIdx === 5 ? 'none' : 'all ease-in-out .5s' : 'none'
                     }} ref={slideRef}>
                     <Image src={slide.src} alt={slide.title} width={760} height={500}/>
                 </li>
