@@ -1,0 +1,35 @@
+.manuBox{
+    padding:5rem 3rem;
+}
+.title{
+    font-size: 2.2rem;
+}
+.manuContainer{
+    display:flex;
+}
+.manuContainer>li{
+    width:calc(100% / 4);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding:2rem;
+}
+.manuContainer>li:hover{
+    box-shadow: 3px 3px 8px 3px rgba(0,0,0,0.3);
+    border-radius: 15px;
+}
+.manuContainer dl>dt{
+    font-weight: 600;
+    font-size:1.3rem;
+    padding-bottom:1.5rem;
+}
+.manuContainer dl>dd{
+    display: flex;
+    flex-direction: column;
+    font-size:1.3rem;
+    padding-bottom: 1rem;
+}
+.manuContainer dl>dd>span{
+    padding-bottom: 1rem;
+}

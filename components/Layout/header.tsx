@@ -11,7 +11,7 @@ const Header = ({list, setTitle, subTitleRef, title})=>{
                 <nav>
                     <ul className={styles.headerManuList}>
                         {list.map(list=>{
-                            return <li key={list.title}><Link href={`/${list.id}`}
+                            return <li key={list.title}><Link href={list.subTitle[0].id ? `/${list.id}/${list.subTitle[0].id}`:`/${list.id}`}
                             onMouseOver={() => handleMouseOver(list.id)}
                             >{list.title}</Link></li>
                         })}
