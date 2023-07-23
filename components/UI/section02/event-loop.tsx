@@ -21,7 +21,6 @@ const EventLoop = ({eventList, activeIdx, setActiveIdx})=>{
         }
         
     };
-console.log(activeIdx)
     useEffect(()=>{
         if(activeIdx !== eventList.length-1){
             loopRef.current.style.top=- (activeIdx*175) +'px';

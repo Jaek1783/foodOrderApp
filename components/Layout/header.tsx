@@ -7,17 +7,17 @@ const Header = ({list, setTitle, subTitleRef, title})=>{
         setTitle(id)
     }
     return  <header className={styles.headerContainer}>
-                <h1><Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35}/></h1>
+                <h1><Link href='/'><Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35}/></Link></h1>
                 <nav>
                     <ul className={styles.headerManuList}>
                         {list.map(list=>{
-                            return <li key={list.title}><Link href={`#`}
+                            return <li key={list.title}><Link href={`/${list.id}`}
                             onMouseOver={() => handleMouseOver(list.id)}
                             >{list.title}</Link></li>
                         })}
                     </ul>
                 </nav>
-                <button className={styles.headerBtn} onMouseOver={()=>{setTitle('m2')}}>
+                <button className={styles.headerBtn} onMouseOver={()=>{setTitle('none')}}>
                     <span>
                         <Image src={'/icon/adress.png'} alt={'위치 아이콘'} width={25} height={25}/>
                     </span>
@@ -33,8 +33,7 @@ const Header = ({list, setTitle, subTitleRef, title})=>{
                         </li>
                     </ul>
                 </div>
-                <SubTitle list={list} title={title} subTitleRef={subTitleRef} setTitle={setTitle}/>
-                
+                {title === 'none' ? '':<SubTitle list={list} title={title} subTitleRef={subTitleRef} setTitle={setTitle}/>}
             </header>
     
 };

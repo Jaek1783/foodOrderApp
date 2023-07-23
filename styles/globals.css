@@ -33,21 +33,37 @@ button:hover{
 main{
     padding-top:5.9rem;
 }
-.m1{
+.manu{
     justify-content:start;
     padding-left:2rem;
 }
-.m2{
+.e-coupon{
     display: none;
 }
-.m3{
+.cs{
     justify-content:center;
     padding-left:2rem;
 }
-.m4{
+.misc{
     justify-content:end;
     margin-left:15rem;
 }
-.m5{
+.brand{
     justify-content:end;
+}
+.safety{
+    width:6.5rem;
+    height:6.5rem;
+    border-radius: 100%;
+    color:#fff;
+    font-weight: 600;
+    background-color: #d20000;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:300px;
+    right:50px;
 }

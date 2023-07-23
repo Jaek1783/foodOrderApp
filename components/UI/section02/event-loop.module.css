@@ -25,12 +25,11 @@
     float: right;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
+    justify-content:flex-end;
+    align-items:flex-end;
 }
 .pageContainer{
     width:20px;
-    /* float:right; */
     height:180px;
     overflow: hidden;
     margin:-80px auto 0;
