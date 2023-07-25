@@ -1,17 +1,25 @@
 .manuBox{
     padding:5rem 3rem;
 }
+.manuBox>p>img{
+    border-radius: 15px;
+}
+.manuBox>p{
+    padding-bottom:2rem
+}
 .title{
     font-size: 2.2rem;
+    padding-bottom: 2rem;
 }
 .manuContainer{
     display:flex;
+    flex-wrap: wrap;
 }
 .manuContainer>li{
     width:calc(100% / 4);
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content:baseline;
    align-items: center;
    padding:2rem;
 }
@@ -22,7 +30,7 @@
 .manuContainer dl>dt{
     font-weight: 600;
     font-size:1.3rem;
-    padding-bottom:1.5rem;
+    padding-bottom:2rem;
 }
 .manuContainer dl>dd{
     display: flex;
@@ -32,4 +40,30 @@
 }
 .manuContainer dl>dd>span{
     padding-bottom: 1rem;
+    font-weight: bold;
+}
+.priceIcon{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    text-align: center;
+    line-height: 33px;
+    margin-right:1rem;
+    color:#e35252;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #fce2e2;
+    border-radius: 10px;
+}
+.subManuBar{
+    display:flex;
+    border-bottom:1px solid #ededed;
+    margin-bottom:2rem;
+}
+.subManuBar>li{
+    font-size:1.5rem;
+    width:calc(100% / 5);
+    text-align: center;
+    font-weight: 300;
+    padding-bottom:1rem;
 }
