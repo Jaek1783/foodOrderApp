@@ -6,7 +6,7 @@ const SubTitle = ({list, title,setTitle, subTitleRef})=>{
     const handleMouseLeave = ()=>{
         setTitle('e-coupon')
     };
-    return <div className={styles.subTitleContainer} ref={subTitleRef} onMouseLeave={()=>{handleMouseLeave()}} style={{display : title === 'e-coupon' ? 'none': 'block'}}>
+    return <div className={styles.subTitleContainer} ref={subTitleRef} onMouseLeave={()=>{handleMouseLeave()}} style={{display : title ? title === 'e-coupon' ? 'none': 'block' : 'none'}}>
         {filterData.map((l)=>{
             return <ul key={l.id} className={styles.subTitleTextContainer +` ${l.id}`}>
                 {l.subTitle.map((item,index)=>{

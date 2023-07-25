@@ -7,7 +7,7 @@ const Header = ({list, setTitle, subTitleRef, title})=>{
         setTitle(id)
     }
     return  <header className={styles.headerContainer}>
-                <h1><Link href='/'><Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35}/></Link></h1>
+                <h1 onMouseOver={()=>{setTitle('none')}}><Link href='/'><Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35}/></Link></h1>
                 <nav>
                     <ul className={styles.headerManuList}>
                         {list.map(list=>{
