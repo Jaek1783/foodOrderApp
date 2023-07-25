@@ -16,12 +16,10 @@ const ManuSubPage = ()=>{
         {id : 'm10', title:'LA BBQ불고기', src:'/manu/manu10.png', Mprice :'28,500 ~', Lprice:'33,900 ~', desc:'#남녀노소좋아하는불고기 #미국BBQ소스'},
         {id : 'm11', title:'콤비네이션 1958', src:'/manu/manu11.png', Mprice :'28,500 ~', Lprice:'33,900 ~', desc:'#오리지널리티 #피자헛의원조 #스테디'},
     ];
-    const [adress, setAdress] = useState<string>('pizza');
     const router = useRouter();
     const slug = router.query.slug;
-    console.log(slug);
-    return<Manu>
-        <PizzaPage manu={manu}/>
+    return<Manu slug={slug}>
+        {slug === 'pizza' ? <PizzaPage manu={manu}/> :''}
     </Manu>
 };
 export default ManuSubPage;

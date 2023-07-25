@@ -2,12 +2,16 @@ import Image from "next/image";
 import styles from './header.module.css';
 import Link from "next/link";
 import SubTitle from "./sub-title";
+import { useRouter } from "next/router";
 const Header = ({list, setTitle, subTitleRef, title})=>{
+    const router = useRouter();
+    const slug = router.query.slug;
+
     const handleMouseOver = (id) => {
         setTitle(id)
     }
     return  <header className={styles.headerContainer}>
-                <h1 onMouseOver={()=>{setTitle('none')}}><Link href='/'><Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35}/></Link></h1>
+                <h1 onMouseOver={()=>{setTitle('none')}}><Link href='/'><Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35} priority/></Link></h1>
                 <nav>
                     <ul className={styles.headerManuList}>
                         {list.map(list=>{

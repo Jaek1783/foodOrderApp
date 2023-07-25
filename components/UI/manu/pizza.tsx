@@ -2,7 +2,7 @@ import styles from './manu.module.css';
 import Image from 'next/image';
 const PizzaPage = ({manu})=>{
     return <>
-                <p><Image src={'/manu/manuAdd.jpeg'} alt='광고 배너 이미지' width={1350} height={140}/></p>
+                <p><Image src={'/manu/manuAdd.jpeg'} alt='광고 배너 이미지' width={1350} height={140} priority/></p>
                     <ul className={styles.manuContainer}>
                         {manu.map(list => {
                             return <li key={list.id}>
