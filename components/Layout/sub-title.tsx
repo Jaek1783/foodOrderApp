@@ -1,20 +1,24 @@
-import { useEffect } from 'react';
 import styles from './sub-title.module.css';
 import Link from 'next/link';
-const SubTitle = ({list, title,setTitle, subTitleRef})=>{
-    const filterData = list.filter(sub => sub.id === title);
-    const handleMouseLeave = ()=>{
-        setTitle('e-coupon')
+const SubTitle = ({list, title,setTitle,subTitleRef})=>{
+    const mouseLeave = ()=>{
+        setTitle('main')
     };
-    return <div className={styles.subTitleContainer} ref={subTitleRef} onMouseLeave={()=>{handleMouseLeave()}} style={{display : title ? title === 'e-coupon' ? 'none': 'block' : 'none'}}>
-        {filterData.map((l)=>{
-            return <ul key={l.id} className={styles.subTitleTextContainer +` ${l.id}`}>
+    return <div 
+    className={styles.subTitleContainer + ` ${title}`} 
+    ref={subTitleRef} 
+    onMouseLeave={mouseLeave}
+    >
+        {list.map((l)=>{
+            if(title === l.id){
+                return <ul key={l.id} className={styles.subTitleTextContainer +` ${l.id}`}>
                 {l.subTitle.map((item,index)=>{
                     if(item.manu){
-                        return <li key={index} ><Link href={`/${l.id}/${item.id}`}>{item.manu}</Link></li>
+                        return <li key={index} ><Link href={item.id ? `/${l.id}/${item.id}`:`/${l.id}`}>{item.manu}</Link></li>
                     } 
                 })}
-            </ul>
+            </ul>   
+            }
         })}
     </div>
 };

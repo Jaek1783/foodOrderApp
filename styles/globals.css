@@ -24,14 +24,17 @@ button{
 button:hover{
     cursor: pointer;
 }
+.allwrap{
+    padding-top:8rem;
+}
 .none{
     display: none;
 }
 .block{
     display: flex;
 }
-main{
-    padding-top:5.9rem;
+.main{
+    display:none;
 }
 .manu{
     justify-content:start;
@@ -42,11 +45,9 @@ main{
 }
 .cs{
     justify-content:center;
-    padding-left:2rem;
 }
 .misc{
     justify-content:end;
-    margin-left:15rem;
 }
 .brand{
     justify-content:end;
