@@ -25,32 +25,7 @@ button:hover{
     cursor: pointer;
 }
 .allwrap{
-    padding-top:8rem;
-}
-.none{
-    display: none;
-}
-.block{
-    display: flex;
-}
-.main{
-    display:none;
-}
-.manu{
-    justify-content:start;
-    padding-left:2rem;
-}
-.e-coupon{
-    display: none;
-}
-.cs{
-    justify-content:center;
-}
-.misc{
-    justify-content:end;
-}
-.brand{
-    justify-content:end;
+    padding-top:5.5rem;
 }
 .safety{
     width:6.5rem;

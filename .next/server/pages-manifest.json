@@ -2,7 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/[slug]": "pages/[slug].js",
   "/manu/[slug]": "pages/manu/[slug].js",
+  "/[slug]": "pages/[slug].js",
+  "/": "pages/index.js",
+  "/cs/[slug]": "pages/cs/[slug].js",
   "/misc/[slug]": "pages/misc/[slug].js"
 }

@@ -1,27 +1,28 @@
 .headerContainer{
-    display:flex;
-    align-items: center;
-    border-bottom:.5px solid #c0c0c0;
-    position:fixed;
     width:1440px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    border-bottom:.5px solid #c0c0c0;
+    position:absolute;
     z-index: 9999;
     background-color: rgba(255,255,255,0.9);
-    padding:0 2rem;
+    padding:2rem 2rem 1rem;
+    top:0;
+    height:87px;
+    overflow: hidden;
 }
-
+.headerContainer:hover{
+    height:200px;
+}
 .headerManuList{
     font-size:20px;
     font-weight: 600;
     font-family:'Noto sans KR';
     display: flex;
 }
-
-.headerManuList>li{
-    padding:2.2rem 0;
-    z-index: 9999;
-}
 .headerManuList>li>a{
-    padding:2.2rem;
+    padding:30px;
 }
 .headerManuList>li>a:hover{
     cursor: pointer;
@@ -33,10 +34,9 @@
     padding:0 5rem 0 1.5rem;
     display: flex;
     align-items: center;
-    /* background-color: aliceblue; */
 }
 
-.headerManuList>ul>li:nth-child(2){
+.headerUserManuList>ul>li:nth-child(2){
     position: relative;
 }
 .issueNum{
@@ -50,8 +50,8 @@
     color:#fff;
     border-radius: 50%;
     position: absolute;
-    right:20%;
-    top:-20%;
+    top:-5px;
+    right:5px;
     z-index: 10;
 }
 .headerUserManuList>ul{
@@ -60,10 +60,34 @@
     padding:0 2rem;
     position: relative;
 }
-.headerUserManuList>ul>li>a{
+.headerUserManuList>ul>li{
     padding:0 1rem;
 }
+.subManu>ul{
+    position:absolute;
+    font-size:1rem;
+    font-weight:500;
+    display: flex;
+    margin-top:2rem;
+}
+.subManu>ul>li{
+    padding:2.5rem;
+}
+.subManu>a{
+    padding:0 1rem;
+}
+.active{
+    border-bottom:1px solid #d21c1c ;
+}
+/* subLink */
 
+.subLink:hover{
+    font-weight:bold;
+    color:#d21c1c;
+}
+
+
+/* hamburgerBar */
 .hamburgerBar>span{
     position: absolute;
     display: inline-block;
