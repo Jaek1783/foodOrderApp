@@ -1,10 +1,13 @@
+import { useRef } from 'react';
+import Input from './input';
 import styles from './manu.module.css';
 import Image from 'next/image';
 const PizzaPage = ({manu})=>{
+
     return <>
                 <p><Image src={'/manu/manuAdd.jpeg'} alt='광고 배너 이미지' width={1350} height={140} priority/></p>
                     <ul className={styles.manuContainer}>
-                        {manu.map(list => {
+                        {manu.map((list,index) => {
                             return <li key={list.id}>
                                 <span><Image src={list.src} alt={list.title} width={250} height={250}/></span>
                                 <dl>

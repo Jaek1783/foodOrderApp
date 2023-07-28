@@ -1,0 +1,36 @@
+/* addBucket */
+.addBucket{
+    position:absolute;
+    top:45%;
+    display: flex;
+}
+.addBucket>button{
+    background-color: #fce2e2;
+    width:30px;
+    height:30px;
+    font-size:1rem;
+    color:#d00505;
+    border-radius: 5px;
+}
+.addBucket>span{
+    font-size:1.2rem;
+    padding:0 1rem;
+    display: inline-block;
+}
+
+/* form */
+
+.input>input{
+    width:30px;
+    height:30px;
+    border:none;
+    font-size:1.4rem;
+    text-align: center;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+.input>input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }

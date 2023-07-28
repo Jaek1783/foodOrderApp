@@ -1,11 +1,11 @@
 .manuBox{
-    padding:5rem 3rem;
+    padding:1rem 3rem;
 }
 .manuBox>p>img{
     border-radius: 15px;
 }
 .manuBox>p{
-    padding-bottom:2rem
+    padding-bottom:2.5rem
 }
 .title{
     font-size: 2.2rem;
@@ -22,6 +22,7 @@
    justify-content:baseline;
    align-items: center;
    padding:2rem;
+   position: relative;
 }
 .manuContainer>li:hover{
     box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.1);
@@ -73,3 +74,4 @@
     border-bottom:1px solid #d00505;
     font-weight: bold;
 }
+

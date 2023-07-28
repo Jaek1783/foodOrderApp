@@ -11,7 +11,7 @@ const Navigation = ({list, title,setTitle})=>{
     const manuClick = (id)=>{
         setActiveManu(id)
     };
-    console.log(router.query, activeManu);
+
     return <nav className={styles.nav}>
                 <ul className={styles.headerManuList}>
                     {list.map((item, index)=>{
