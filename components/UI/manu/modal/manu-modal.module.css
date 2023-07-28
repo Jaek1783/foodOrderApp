@@ -1,0 +1,36 @@
+.modalContainer{
+    width:40%;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border:1px solid #000;
+    display:none;
+    z-index: 9999;
+    padding:1rem;
+}
+.layoutContainer>dt{
+    display: flex;
+}
+.close{
+ font-size:1.2rem;
+ font-weight:bold;
+ position: absolute;
+ top:0;
+ right:0;
+ padding:1rem;
+}
+.desc>dt{
+    font-size:1.2rem;
+    font-weight:bold;
+    padding:1rem 0;
+
+}
+/* btnContainer */
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

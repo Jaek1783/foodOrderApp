@@ -1,8 +1,7 @@
 /* addBucket */
 .addBucket{
-    position:absolute;
-    top:45%;
     display: flex;
+    padding:0 2rem 2rem;
 }
 .addBucket>button{
     background-color: #fce2e2;

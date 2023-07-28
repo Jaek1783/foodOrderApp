@@ -27,6 +27,7 @@
 .manuContainer>li:hover{
     box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.1);
     border-radius: 15px;
+    cursor: pointer;
 }
 .manuContainer dl>dt{
     font-weight: 600;
@@ -74,4 +75,3 @@
     border-bottom:1px solid #d00505;
     font-weight: bold;
 }
-

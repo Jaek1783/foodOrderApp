@@ -1,16 +1,21 @@
 import Input from "./input";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from './add-button.module.css';
-const AddButton = ({index})=>{
-        const inputRef = useRef([]);
+const AddManuButton = ({index, inputRef})=>{
     const btnRef = useRef([]);
     const numHandler = (btn,index)=>{
         const id = btn.id;
-        if(id === 'increment'){
-            inputRef.current[index].value = parseInt(inputRef.current[index].value) + 1 ;
-        }else{
-            inputRef.current[index].value = parseInt(inputRef.current[index].value) - 1 ;
-        }
+        const max = inputRef.current[index].max;
+        const min = inputRef.current[index].min;
+            if(id === 'increment'){
+                if(inputRef.current[index].value >= min && inputRef.current[index].value <= max-1){
+                inputRef.current[index].value = parseInt(inputRef.current[index].value) + 1 ;
+                }
+            }else{
+                if(inputRef.current[index].value >= min+1 && inputRef.current[index].value <= max){
+                inputRef.current[index].value = parseInt(inputRef.current[index].value) - 1 ;
+                }
+            }
     };
     return <div className={styles.addBucket}>
                 <button id="increment" onClick={()=>{numHandler(btnRef.current[0],index)}} ref={btn => btnRef.current[0] = btn}>+</button>
@@ -18,7 +23,7 @@ const AddButton = ({index})=>{
                     <Input label='Amount' input={{
                         id:'amount',
                         type:'number',
-                        min:'1',
+                        min:'0',
                         max:'5',
                         step:'1',
                         value:'0',
@@ -30,4 +35,4 @@ const AddButton = ({index})=>{
                 <button id="descrement" ref={btn=> btnRef.current[1]=btn} onClick={()=>{numHandler(btnRef.current[1],index)}}>-</button>
             </div>
 };
-export default AddButton;
+export default AddManuButton;
