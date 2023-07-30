@@ -1,5 +1,5 @@
 import styles from './choice-size.module.css';
-const ChoiceSize = ({Mprice, Lprice, choice, setChoice, total, index})=>{
+const ChoiceSize = ({Mprice, Lprice, choice, setChoice, total, index, title})=>{
     const changeChoiceHandler=()=>{
         setChoice(choice => !choice);
     };
@@ -12,7 +12,7 @@ const ChoiceSize = ({Mprice, Lprice, choice, setChoice, total, index})=>{
                         <span className={styles.priceIcon}>M</span>
                         <span>{Mprice}</span>
                    </button> : '' }
-            <button className={styles.addCart} onClick={()=>{total(index)}}>주문하기</button>
+            <button className={styles.addCart} onClick={()=>{total(index, title)}}>장바구니 담기</button>
     </div>
 };
 export default ChoiceSize;

@@ -11,7 +11,7 @@ const ManuModal = ({index, modalRef,close, title, desc, Mprice, Lprice, choice, 
                     <h1><Image src={index < 10 ? `/manu/manu0${index}.png`:`/manu/manu${index}.png`} alt={`메뉴 이미지 0${index}`} width={300} height={300}/></h1>
                         <AddManuButton index={index}inputRef={inputRef}/>
                     </div>
-                    <ChoiceSize Mprice={Mprice} Lprice={Lprice} choice={choice} setChoice={setChoice} total={total} index={index}/>
+                    <ChoiceSize Mprice={Mprice} Lprice={Lprice} choice={choice} setChoice={setChoice} total={total} index={index} title={title} />
             </dt>
         </dl>
         <dd>

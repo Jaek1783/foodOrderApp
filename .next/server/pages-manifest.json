@@ -3,5 +3,9 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/[slug]": "pages/[slug].js",
-  "/manu/[slug]": "pages/manu/[slug].js"
+  "/cs/[slug]": "pages/cs/[slug].js",
+  "/manu/[slug]": "pages/manu/[slug].js",
+  "/misc/[slug]": "pages/misc/[slug].js",
+  "/": "pages/index.js",
+  "/cart": "pages/cart.js"
 }

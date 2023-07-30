@@ -14,14 +14,15 @@ const PizzaPage = ({manu})=>{
         modalRef.current[index].style.display='none';
         inputRef.current[index].value = 0;
     };
-    const total = (index)=>{
+    const total = (index,title)=>{
         const val = parseInt(inputRef.current[index].value);
         const manu = choice ? 'L':'M' ;
-        console.log(val, manu)
+        console.log(val, manu, title)
         if(parseInt(inputRef.current[index].value) === 0){
             alert('수량을 확인해 주세요')
         }
         inputRef.current[index].value = 0;
+        setChoice(true);
     };
     return <>
                 <p><Image src={'/manu/manuAdd.jpeg'} alt='광고 배너 이미지' width={1350} height={140} priority/></p>
