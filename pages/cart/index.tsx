@@ -1,6 +1,8 @@
-const CartPage = ()=>{
+import CartPage from "../../components/UI/cart/cart-page";
+
+const Cart = ()=>{
     return <div>
-        <h1>장바구니</h1>
+        <CartPage/>
     </div>
 };
-export default CartPage;
+export default Cart;

@@ -1,0 +1,25 @@
+.cartContainer{
+    padding:5.5rem 2.5rem 0;
+}
+.cartContainer>h1{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.textContainer{
+    width:500px;
+    margin:0 auto;
+}
+.textContainer>p{
+    font-size:2.7rem;
+    font-weight: 300;
+    text-align:center;
+    padding-bottom:1rem;
+}
+.textContainer>button{
+    width:100%;
+    height:60px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    font-size:1.2rem;
+    box-shadow: 1px 1px 8px #b8b8b8;
+}
