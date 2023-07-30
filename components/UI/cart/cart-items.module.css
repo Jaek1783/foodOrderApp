@@ -1,0 +1,11 @@
+.itemContainer{
+    width:80%;
+    margin:0 auto;
+}
+.all{
+    display: flex;
+    justify-content: space-around;
+    padding:1rem;
+    font-weight:bold;
+    font-size:1.2rem;
+}

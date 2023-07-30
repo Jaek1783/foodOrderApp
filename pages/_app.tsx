@@ -4,6 +4,8 @@ import '../styles/globals.css';
 import React from 'react';
 import type {AppProps} from 'next/app';
 import MyContext from '../store/context';
+import { store } from '../store/store';
+import {Provider} from 'react-redux';
 interface HeaderType {
     id : string,
     title : string,
@@ -23,11 +25,14 @@ const MyApp = ({Component, pageProps}:AppProps) => {
         {id:'misc',title : '단체주문', subTitle:[{id:'group-order',manu:'단체 배달'}, {id:'corp-card',manu:'모바일 상품권(단체/기업)'}, {id:'gift-card',manu:'지류 상품권'}, {id:null,manu:null},{id:null,manu:null}]},
         {id:'brand',title : '창업안내', subTitle:[{id:null,manu:'창업문의'},{id:null,manu:null}, {id:null,manu:null}, {id:null,manu:null}, {id:null,manu:null}]},
     ]
-    return <MyContext.Provider value={ManuList}>
-                <Layout>
-                    <Component {...pageProps}/>
-                </Layout>
+    return <Provider store={store}>
+            <MyContext.Provider value={ManuList}>
+                        <Layout>
+                            <Component {...pageProps}/>
+                        </Layout>
             </MyContext.Provider>
+    </Provider>
+
 
     
 }

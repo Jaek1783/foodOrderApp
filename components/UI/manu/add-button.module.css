@@ -3,14 +3,7 @@
     display: flex;
     padding:0 2rem 2rem;
 }
-.addBucket>button{
-    background-color: #fce2e2;
-    width:30px;
-    height:30px;
-    font-size:1rem;
-    color:#d00505;
-    border-radius: 5px;
-}
+
 .addBucket>span{
     font-size:1.2rem;
     padding:0 1rem;

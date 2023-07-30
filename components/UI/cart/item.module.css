@@ -1,0 +1,36 @@
+.itemBox{
+    height:100px;
+    font-weight:bold;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius:25px;
+    padding:1rem;
+    margin-bottom:1rem;
+}
+.rightItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightItem>p{
+    padding:0 1rem;
+}
+.leftContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftContainer>span{
+    display: inline-flex;
+    font-weight: bold;
+    width:30px;
+    height:30px;
+    justify-content: center;
+    align-items: center;
+}
+.leftContainer>p{
+    text-align: center;
+    padding:1rem;
+}

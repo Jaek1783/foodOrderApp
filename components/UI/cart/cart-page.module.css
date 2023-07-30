@@ -3,6 +3,7 @@
 }
 .cartContainer>h1{
     font-size: 2.2rem;
+    padding-bottom:1rem;
     font-weight: bold;
 }
 .textContainer{

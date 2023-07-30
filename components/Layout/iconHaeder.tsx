@@ -2,7 +2,10 @@ import styles from './icon-haeder.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
 const IconHaeder = ({spanRef})=>{
+    const data = useSelector((state:RootState) => state.cart.cartItems);
     const [active, setActive] = useState<boolean>(true);
     const clickAnimation = ()=>{
         setActive(active => !active);
@@ -24,7 +27,7 @@ const IconHaeder = ({spanRef})=>{
                         <Link href={'/cart'}>
                             <Image src={'/icon/add.png'} alt={'user이미지'} width={30} height={30} />
                         </Link>
-                        <span className={styles.issueNum}>0</span>
+                        <span className={styles.issueNum}>{data.length}</span>
                     </li>
                     <li>
                         <div className={styles.hamburgerBar} ref={spanRef} onClick={()=>{clickAnimation()}}>
