@@ -1,10 +1,10 @@
 import Image from "next/image";
 import styles from './item.module.css'
 import Btn from "../../Layout/btn";
-import { plusVal, minusVal } from "../../Redux/slise";
+import { plusVal, minusVal,deleteItem } from "../../Redux/slise";
 import { useDispatch } from "react-redux";
-const Item = ({item})=>{
-    const all = (item.price * item.val).toLocaleString();
+const Item = ({item, id})=>{
+    const price = (item.price * item.val).toLocaleString();
     const dispatch = useDispatch();
     const increaseVal = ()=>{
         if(item.val !== 5){
@@ -15,6 +15,11 @@ const Item = ({item})=>{
         if(item.val !== 1){
             dispatch(minusVal(item))
         }
+    };
+    const deleteButton = (id)=>{
+        const addId = {...item, id};
+        dispatch(deleteItem(addId));
+        console.log(item)
     };
     return <li className={styles.itemBox}>
         <div className={styles.rightItem}>
@@ -28,7 +33,8 @@ const Item = ({item})=>{
                 <span>{item.val}</span>
             <Btn><button onClick={decreaseVal}>-</button></Btn>
         </div>
-        <p>{all}</p>
+        <p>{price}</p>
+        <button onClick={()=>{deleteButton(id)}} className={styles.delBtn}>삭제</button>
         </div>
     </li>
 };

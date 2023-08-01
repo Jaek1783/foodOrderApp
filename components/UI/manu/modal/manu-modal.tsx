@@ -5,7 +5,15 @@ import ChoiceSize from "./choice-size";
 import { useState } from "react";
 import { StateType , addCart} from "../../../Redux/slise";
 import { useDispatch } from "react-redux";
-const ManuModal = ({index, modalRef, title, desc, Mprice, Lprice, choice, setChoice})=>{
+const ManuModal = ({index, 
+                    modalRef, 
+                    title, 
+                    desc, 
+                    Mprice, 
+                    Lprice, 
+                    choice, 
+                    setChoice
+                })=>{
     const dispatch = useDispatch();
     const [value, setValue] = useState<number>(0);
     const close = (index)=>{
@@ -20,7 +28,7 @@ const ManuModal = ({index, modalRef, title, desc, Mprice, Lprice, choice, setCho
             alert('수량을 확인해 주세요')
         }
         if(val !== 0){
-            const load : StateType = { val, size, title, index, price };
+            const load : StateType = { val, size, title, index, price};
             dispatch(addCart(load));
             modalRef.current[index].style.display='none';
         }
@@ -33,9 +41,21 @@ const ManuModal = ({index, modalRef, title, desc, Mprice, Lprice, choice, setCho
             <dt>
                     <div className={styles.btnContainer}>
                     <h1><Image src={index < 10 ? `/manu/manu0${index}.png`:`/manu/manu${index}.png`} alt={`메뉴 이미지 0${index}`} width={300} height={300}/></h1>
-                        <AddManuButton index={index} value={value} setValue={setValue}/>
+                        <AddManuButton 
+                            index={index} 
+                            value={value} 
+                            setValue={setValue}
+                        />
                     </div>
-                    <ChoiceSize Mprice={Mprice} Lprice={Lprice} choice={choice} setChoice={setChoice} total={total} index={index} title={title} />
+                    <ChoiceSize 
+                        Mprice={Mprice} 
+                        Lprice={Lprice} 
+                        choice={choice} 
+                        setChoice={setChoice} 
+                        total={total} 
+                        index={index} 
+                        title={title} 
+                    />
             </dt>
         </dl>
         <dd>

@@ -11,52 +11,6 @@
     font-size: 2.2rem;
     padding-bottom: 2rem;
 }
-.manuContainer{
-    display:flex;
-    flex-wrap: wrap;
-}
-.manuContainer>li{
-    width:calc(100% / 4);
-   display: flex;
-   flex-direction: column;
-   justify-content:baseline;
-   align-items: center;
-   padding:2rem;
-   position: relative;
-}
-.manuContainer>li:hover{
-    box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.1);
-    border-radius: 15px;
-    cursor: pointer;
-}
-.manuContainer dl>dt{
-    font-weight: 600;
-    font-size:1.3rem;
-    padding-bottom:2rem;
-}
-.manuContainer dl>dd{
-    display: flex;
-    flex-direction: column;
-    font-size:1.3rem;
-    padding-bottom: 1rem;
-}
-.manuContainer dl>dd>span{
-    padding-bottom: 1rem;
-    font-weight: bold;
-}
-.priceIcon{
-    display: inline-block;
-    width:30px;
-    height:30px;
-    text-align: center;
-    line-height: 33px;
-    margin-right:1rem;
-    color:#e35252;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #fce2e2;
-    border-radius: 10px;
-}
 .subManuBar{
     display:flex;
     border-bottom:1px solid #ededed;

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
+import CartItem from "../UI/cart/cart-items";
 
 export interface CartType {
     cartItems: StateType[];
@@ -12,7 +13,8 @@ export interface StateType {
     size: string,
     title:  string,
     index:number,
-    price:number
+    price:number,
+    id ? : number
 }
 const initialState:CartType = {
     cartItems : [],
@@ -49,9 +51,16 @@ export const CartSlide = createSlice({
             // // 업데이트 후 totalValSum 재계산
             state.totalPriceSum = state.cartItems.reduce((acc, item) => acc + (item.price * item.val), 0);
             state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
-        }
+        },
+        deleteItem: (state, action: PayloadAction<StateType>) => {
+            const {size,title, index} = action.payload;
+            state.cartItems = [...state.cartItems.filter((item)=>item.size !== size), ...state.cartItems.filter((item)=>item.size===size).filter((item)=>item.title !==title)];
+            console.log(state.cartItems)
+            state.totalPriceSum = state.cartItems.reduce((acc, item) => acc + (item.price * item.val), 0);
+            state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
+          },
     }
 });
 
-export const { addCart,plusVal,minusVal } = CartSlide.actions;
+export const { addCart,plusVal,minusVal, deleteItem } = CartSlide.actions;
 export default CartSlide.reducer;

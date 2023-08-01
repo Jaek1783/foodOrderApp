@@ -6,7 +6,6 @@ import { RootState } from '../../../store/store';
 import CartItem from './cart-items';
 const CartPage = ()=>{
     const cartItem = useSelector((state:RootState)=>state.cart.cartItems);
-
     return <div className={styles.cartContainer}>
         <h1>장바구니</h1>
         {cartItem.length === 0 ? <NonCartItem/>:<CartItem items={cartItem}/>}

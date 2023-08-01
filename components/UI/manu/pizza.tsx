@@ -1,4 +1,4 @@
-import styles from './manu.module.css';
+import styles from './pizza.module.css';
 
 import Image from 'next/image';
 import ManuModal from './modal/manu-modal';
@@ -7,7 +7,7 @@ import { useRef, useState } from 'react';
 const PizzaPage = ({manu})=>{
     const modalRef = useRef([]);
     const [choice, setChoice]=useState<boolean>(true);
-    const modalHandler = (index,list)=>{
+    const modalHandler = (index)=>{
         modalRef.current[index].style.display='block';
     };
     return <>
@@ -17,7 +17,7 @@ const PizzaPage = ({manu})=>{
                             const mPrice = list.Mprice ?  list.Mprice.toLocaleString() : '';
                             const lPrice = list.Lprice ?  list.Lprice.toLocaleString() : '';
 
-                            return <li key={list.id} onClick={()=>{modalHandler(index,list)}}>
+                            return <li key={index} onClick={()=>{modalHandler(index)}}>
                                 <span><Image src={index <10 ? `/manu/manu0${index}.png`:`/manu/manu${index}.png`} alt={list.title} width={250} height={250}/></span>
                                 <dl>
                                     <dt>{list.title}</dt>

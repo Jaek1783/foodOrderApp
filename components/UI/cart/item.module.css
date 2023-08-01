@@ -38,3 +38,9 @@
     text-align: center;
     padding:1rem;
 }
+.delBtn{
+    padding:.5rem 1rem;
+    border-radius: 5px;
+    background-color: #fce2e2;
+    color: #d00505;
+}

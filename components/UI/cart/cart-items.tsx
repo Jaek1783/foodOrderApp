@@ -10,7 +10,7 @@ const CartItem = ({items})=>{
     const totalValSum = valSum.toLocaleString();
     return <div>
         <ul className={styles.itemContainer}>
-            {items.map((item, index) =><Item item={item} key={index}/>)}
+            {items.map((item, index) =><Item item={item} key={index} id={index}/>)}
         </ul>
         <hr/>
         <div className={styles.all}>
