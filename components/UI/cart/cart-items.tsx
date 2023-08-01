@@ -4,16 +4,19 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
 
 const CartItem = ({items})=>{
-    const data = useSelector((state:RootState)=>state.cart.totalValSum);
-    const all = data.toLocaleString();
+    const priceSum = useSelector((state:RootState)=>state.cart.totalPriceSum);
+    const valSum = useSelector((state:RootState)=>state.cart.totalValSum);
+    const  totalPriceSum = priceSum.toLocaleString();
+    const totalValSum = valSum.toLocaleString();
     return <div>
         <ul className={styles.itemContainer}>
             {items.map((item, index) =><Item item={item} key={index}/>)}
         </ul>
         <hr/>
         <div className={styles.all}>
-            <p>합계</p>
-            <p>{all}</p>
+            <p>전체</p>
+            <p>수량 : {totalValSum} BOX</p>
+            <p>{totalPriceSum}</p>
         </div>
     </div>
 };
