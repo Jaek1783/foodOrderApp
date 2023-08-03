@@ -6,7 +6,7 @@ const ChoiceSize = ({Mprice, Lprice, choice, setChoice, total, index, title, siz
     const changeChoiceHandler=()=>{
         setChoice(choice => !choice);
     };
-    const checkArr = (cartItems, index,size, title)=>{
+    const checkArr = (cartItems,index,size, title)=>{
         const findIndex = cartItems.findIndex(item => item.index === index);
         const findSize = cartItems.findIndex(item => item.size === size );
         if(findIndex === -1){
@@ -18,7 +18,10 @@ const ChoiceSize = ({Mprice, Lprice, choice, setChoice, total, index, title, siz
                 total(index, title)
                 alert('장바구니에 담겼습니다')
             }
-            alert('상품이 장바구니에 존재합니다')
+            if(findSize === 0){
+                alert('상품이 장바구니에 존재합니다')
+            }
+            
         }
     };
     return <div className={styles.choiceContainer}>

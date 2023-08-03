@@ -32,28 +32,27 @@ export const CartSlide = createSlice({
             state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
         },
         plusVal: (state, action: PayloadAction<StateType>) => {
-            const { index, val, size, title } = action.payload;
-            console.log(index, val, size, title)
+            const { val,id} = action.payload;
             // // cartItems 배열 내 해당 아이템의 속성을 업데이트
-            state.cartItems[index].val = val+1;
-            state.cartItems[index].size = size;
-            state.cartItems[index].title = title;
+            state.cartItems[id].val = val+1;
             // // 업데이트 후 totalValSum 재계산
             state.totalPriceSum = state.cartItems.reduce((acc, item) => acc + (item.price * item.val), 0);
             state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
         },
         minusVal: (state, action: PayloadAction<StateType>) => {
-            const { index, val, size, title } = action.payload;
+            const { val,id } = action.payload;
             // // cartItems 배열 내 해당 아이템의 속성을 업데이트
-            state.cartItems[index].val = val-1;
-            state.cartItems[index].size = size;
-            state.cartItems[index].title = title;
+            state.cartItems[id].val = val-1;
             // // 업데이트 후 totalValSum 재계산
             state.totalPriceSum = state.cartItems.reduce((acc, item) => acc + (item.price * item.val), 0);
             state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
         },
         deleteItem: (state, action: PayloadAction<StateType>) => {
-            
+            const {size,title} = action.payload;
+            state.cartItems = [...state.cartItems.filter((item)=>item.size !== size), ...state.cartItems.filter((item)=>item.size===size).filter((item)=>item.title !==title)];
+            console.log(state.cartItems)
+            state.totalPriceSum = state.cartItems.reduce((acc, item) => acc + (item.price * item.val), 0);
+            state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
           },
     }
 });

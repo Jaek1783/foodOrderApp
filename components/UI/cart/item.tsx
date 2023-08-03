@@ -6,20 +6,20 @@ import { useDispatch } from "react-redux";
 const Item = ({item, id})=>{
     const price = (item.price * item.val).toLocaleString();
     const dispatch = useDispatch();
-    const increaseVal = ()=>{
+    const increaseVal = (id)=>{
         if(item.val !== 5){
-            dispatch(plusVal(item))
+            const addId = {...item, id};
+            dispatch(plusVal(addId))
         }
     };
-    const decreaseVal = ()=>{
+    const decreaseVal = (id)=>{
         if(item.val !== 1){
-            dispatch(minusVal(item))
+            const addId = {...item, id};
+            dispatch(minusVal(addId))
         }
     };
-    const deleteButton = (id)=>{
-        const addId = {...item, id};
-        dispatch(deleteItem(addId));
-        console.log(item)
+    const deleteButton = ()=>{
+        dispatch(deleteItem(item));
     };
     return <li className={styles.itemBox}>
         <div className={styles.rightItem}>
@@ -29,12 +29,12 @@ const Item = ({item, id})=>{
         <div  className={styles.leftContainer}>
         <p>선택 사이즈 : {item.size}</p>
         <div className={styles.btnContainer}>
-            <Btn><button onClick={increaseVal}>+</button></Btn>
+            <Btn><button onClick={()=>{increaseVal(id)}}>+</button></Btn>
                 <span>{item.val}</span>
-            <Btn><button onClick={decreaseVal}>-</button></Btn>
+            <Btn><button onClick={()=>{decreaseVal(id)}}>-</button></Btn>
         </div>
         <p>{price}</p>
-        <button onClick={()=>{deleteButton(id)}} className={styles.delBtn}>삭제</button>
+        <button onClick={()=>{deleteButton()}} className={styles.delBtn}>삭제</button>
         </div>
     </li>
 };

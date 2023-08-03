@@ -4,8 +4,7 @@ import AddManuButton from "../add-button";
 import ChoiceSize from "./choice-size";
 import { useState } from "react";
 import { StateType , addCart} from "../../../Redux/slise";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../../store/store";
+import { useDispatch} from "react-redux";
 const ManuModal = ({index, 
                     modalRef, 
                     title, 
@@ -23,7 +22,7 @@ const ManuModal = ({index,
         modalRef.current[index].style.display='none';
     };
 
-    const total = (index,title)=>{
+    const total = (index,title,id)=>{
         const val = value;
 
         const price = choice ? Lprice : Mprice;
