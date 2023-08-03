@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import styles from './header.module.css';
 import { useState } from 'react';
-const Navigation = ({list, title,setTitle,header})=>{
-    const [activeManu, setActiveManu] = useState('main');
+const Navigation = ({list, title,setTitle,header,activeManu, setActiveManu})=>{
+
     const mouseOver = (id)=>{
         setTitle(id)
         header.current.style.height=200 + 'px';

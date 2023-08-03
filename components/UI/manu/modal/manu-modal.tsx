@@ -4,7 +4,8 @@ import AddManuButton from "../add-button";
 import ChoiceSize from "./choice-size";
 import { useState } from "react";
 import { StateType , addCart} from "../../../Redux/slise";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../../store/store";
 const ManuModal = ({index, 
                     modalRef, 
                     title, 
@@ -14,15 +15,17 @@ const ManuModal = ({index,
                     choice, 
                     setChoice
                 })=>{
+
     const dispatch = useDispatch();
     const [value, setValue] = useState<number>(0);
+    const size = choice ? 'L':'M' ;
     const close = (index)=>{
         modalRef.current[index].style.display='none';
     };
+
     const total = (index,title)=>{
         const val = value;
 
-        const size = choice ? 'L':'M' ;
         const price = choice ? Lprice : Mprice;
         if(val === 0){
             alert('수량을 확인해 주세요')
@@ -54,7 +57,8 @@ const ManuModal = ({index,
                         setChoice={setChoice} 
                         total={total} 
                         index={index} 
-                        title={title} 
+                        title={title}
+                        size={size}
                     />
             </dt>
         </dl>

@@ -53,11 +53,7 @@ export const CartSlide = createSlice({
             state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
         },
         deleteItem: (state, action: PayloadAction<StateType>) => {
-            const {size,title, index} = action.payload;
-            state.cartItems = [...state.cartItems.filter((item)=>item.size !== size), ...state.cartItems.filter((item)=>item.size===size).filter((item)=>item.title !==title)];
-            console.log(state.cartItems)
-            state.totalPriceSum = state.cartItems.reduce((acc, item) => acc + (item.price * item.val), 0);
-            state.totalValSum = state.cartItems.reduce((acc, item) => acc + (item.val), 0);
+            
           },
     }
 });
