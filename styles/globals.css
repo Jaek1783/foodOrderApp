@@ -27,6 +27,9 @@ button:hover{
 .allwrap{
     padding-top:5.5rem;
 }
+.sectionContainer{
+    position: relative;
+}
 .safety{
     width:6.5rem;
     height:6.5rem;
@@ -40,6 +43,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     position:fixed;
-    bottom:300px;
+    bottom:150px;
     right:50px;
+    z-index: 999;
 }

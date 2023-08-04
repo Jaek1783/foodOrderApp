@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Manu from '../../components/UI/manu/manu'
 import PizzaPage from '../../components/UI/manu/pizza';
 import { useRouter } from 'next/router';
+import NonReadyPage from '../../components/UI/manu/non-ready';
 const ManuSubPage = ()=>{
     const manu = [
         {title:'씨푸드킹', Mprice :30500, Lprice:36900, desc:'#통새우&통관자 #프레첼 치즈엣지조합 #달콤한 디저트 엣지', modal:'쫄깃한 통관자와 탱글탱글 통새우가 듬뿍!달콤한 프레첼 엣지까지~'},
@@ -21,7 +22,10 @@ const ManuSubPage = ()=>{
    let contents;
    if(slug === 'pizza'){
     contents = <PizzaPage manu={manu}/>
-   } 
+   }
+   else{
+    contents = <NonReadyPage/>
+   }
     return<Manu slug={slug}>
         {contents}
     </Manu>

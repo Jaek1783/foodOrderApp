@@ -5,9 +5,9 @@ import Footer from "../components/UI/footer/footer";
 const HomePage = ()=>{
     return <>
     <div className='sectionContainer'>
+        <span className="safety">FOOD<br/>SAFETY<br/>피자헛</span>
         <Section01/>
         <Section02/>
-        <span className="safety">FOOD<br/>SAFETY<br/>피자헛</span>
     </div>
         <Footer />
     </>

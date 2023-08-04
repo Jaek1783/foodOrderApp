@@ -1,0 +1,12 @@
+.nonReadyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50vh;
+}
+.nonReadyContainer>h1{
+    background-color: #fce2e2;
+    color:#d00505;
+    border-radius: 5px;
+    padding:1rem;
+}
