@@ -6,6 +6,7 @@
 }
 body{
     min-width: 1440px;
+    margin:0 auto;
 }
 image{
     width:100%;

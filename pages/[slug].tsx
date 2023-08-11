@@ -3,13 +3,14 @@ import LoginPage from "../components/UI/login/login";
 const SubPage = ()=>{
     const router = useRouter();
     const slug = router.query.slug
+    console.log(slug)
     let contents;
     if(slug === 'e-coupon'){
         alert('로그인 후 이용 가능 합니다.');
-        contents === <LoginPage/>
+        contents = <LoginPage/>
     }
-    return <div>
+    return <>
         {contents}
-    </div>
+    </>
 };
 export default SubPage;
