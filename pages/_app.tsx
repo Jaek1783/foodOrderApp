@@ -6,17 +6,7 @@ import type {AppProps} from 'next/app';
 import MyContext from '../store/context';
 import { store } from '../store/store';
 import {Provider} from 'react-redux';
-interface HeaderType {
-    id : string,
-    title : string,
-    subTitle ?: [
-        {id:string, manu:string},
-        {id:string, manu:string},
-        {id:string, manu:string},
-        {id:string, manu:string},
-        {id:string, manu:string},
-    ]
-}
+import { HeaderType } from '../utill/types';
 const MyApp = ({Component, pageProps}:AppProps) => {
     const ManuList:HeaderType[] = [
         {id:'manu',title : '메뉴', subTitle:[{id:'pizza',manu:'피자'}, {id:'mybox',manu:'마이박스(1인 메뉴)'}, {id:'set',manu:'세트'}, {id:'pasta-and-chiken',manu:'파스타&치킨'},{id:'side-and-drink',manu:'사이드& 음료'}]},

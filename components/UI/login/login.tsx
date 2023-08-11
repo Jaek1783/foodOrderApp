@@ -17,7 +17,7 @@ const LoginPage = ()=>{
             </label>
             <button className={styles.login}>로그인</button>
         </form>
-        {/* <button className={styles.sign}>회원가입</button> */}
+        <button className={styles.sign}>회원가입</button>
         </div>
     </section>
 };

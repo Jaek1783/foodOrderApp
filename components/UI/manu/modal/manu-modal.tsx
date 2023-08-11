@@ -42,7 +42,7 @@ const ManuModal = ({index,
         <dl className={styles.layoutContainer}>
             <dt>
                     <div className={styles.btnContainer}>
-                    <h1><Image src={index < 10 ? `/manu/manu0${index}.png`:`/manu/manu${index}.png`} alt={`메뉴 이미지 0${index}`} width={300} height={300}/></h1>
+                    <h1><Image src={index < 10 ? `/manu/pizza/manu0${index}.png`:`/manu/manu${index}.png`} alt={`메뉴 이미지 0${index}`} width={300} height={300}/></h1>
                         <AddManuButton 
                             index={index} 
                             value={value} 

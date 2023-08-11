@@ -4,9 +4,9 @@ import Link from "next/link";
 import IconHaeder from "./iconHaeder";
 import AddressButton from "./address-button";
 import Navigation from "./nav";
-import { useRef,useState } from "react";
-
-const Header = ({list, setTitle, title})=>{
+import { useEffect, useRef,useState } from "react";
+import axios from "axios";
+const Header = ({list, setTitle, title})=>{    
     const [activeManu, setActiveManu] = useState('main');
     const headerRef = useRef(null);
     const spanRef = useRef(null);
