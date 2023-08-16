@@ -1,7 +1,7 @@
 import styles from './pizza.module.css';
 
 import Image from 'next/image';
-import ManuModal from './modal/manu-modal';
+import ManuModal from '../modal/manu-modal';
 
 import { useRef, useState } from 'react';
 const pizza = [
