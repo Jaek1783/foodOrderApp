@@ -1,7 +1,7 @@
 import Input from "./input";
 import { useEffect, useRef } from "react";
 import styles from './add-button.module.css';
-import Btn from "../../Layout/btn";
+import Btn from "../button/btn";
 const AddManuButton = ({index, value, setValue})=>{
     const btnRef = useRef([]);
     const numHandler = (btn,index)=>{

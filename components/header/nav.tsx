@@ -5,7 +5,6 @@ const Navigation = ({list, title,setTitle,header,activeManu, setActiveManu})=>{
 
     const mouseOver = (id)=>{
         setTitle(id)
-        header.current.style.height=200 + 'px';
     };
     const manuClick = (id)=>{
         setActiveManu(id)

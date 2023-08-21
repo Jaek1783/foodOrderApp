@@ -1,4 +1,4 @@
-import Header from "./header";
+import Header from "../header/header";
 import { useState, useRef, useContext} from "react";
 import MyContext from "../../store/context";
 const Layout = ({children})=>{

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from './item.module.css'
-import Btn from "../../Layout/btn";
+import Btn from "../button/btn";
 import { plusVal, minusVal,deleteItem } from "../../Redux/slise";
 import { useDispatch } from "react-redux";
 const Item = ({item, id})=>{
@@ -23,7 +23,7 @@ const Item = ({item, id})=>{
     };
     return <li className={styles.itemBox}>
         <div className={styles.rightItem}>
-            <Image src={`/manu/manu0${item.index}.png`} alt={`${item.title}이미지`} width={100} height={100}/>
+            <Image src={`/manu/pizza/manu0${item.index}.png`} alt={`${item.title}이미지`} width={100} height={100}/>
             <p>{item.title}</p>
         </div>
         <div  className={styles.leftContainer}>
