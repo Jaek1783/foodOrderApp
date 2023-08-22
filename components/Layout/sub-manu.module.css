@@ -1,5 +1,21 @@
 .subManuContainer{
-    height:100px;
+    width:100%;
+    /* height:100px; */
     background-color: #fff;
     position:absolute;
+    top:90px;
+    left:0;
+    z-index: 9999;
+    /* display:none; */
+}
+.subManuContainer>ul{
+    display:flex;
+    font-weight:normal;
+}
+.subManuContainer>ul>li{
+    padding:2.5rem 1.5rem;
+    margin:0 .5rem;
+}
+.subManuContainer>ul>li>a:hover{
+    color:#d21c1c;
 }

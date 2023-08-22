@@ -1,38 +1,42 @@
 import Link from 'next/link';
-import styles from './header.module.css';
-import { useState } from 'react';
-const Navigation = ({list, title,setTitle,header,activeManu, setActiveManu})=>{
-
-    const mouseOver = (id)=>{
-        setTitle(id)
-    };
-    const manuClick = (id)=>{
-        setActiveManu(id)
-    };
-
+import styles from './nav.module.css'
+import SubManu from '../Layout/sub-manu';
+import {useRef} from 'react';
+const Navigation = ({title,setTitle,activeManu, setActiveManu, ManuList, SubList})=>{
     return <nav className={styles.nav}>
-                <ul className={styles.headerManuList}>
-                    {list.map((item, index)=>{
+                <ul className={styles.navContainer}>
+                    {ManuList.map((manu,index)=>{
+                        // if(manu.id === '')
+                        const subRef = useRef(null);
+                        const manuMouseOver = (id)=>{
+                            setTitle(id)
+                            // subRef.current.style.display='block'
+                        }
+                        const mouseLeave = ()=>{
+                            setTitle('main');
+                            subRef.current.style.display='none'
+                        }
                         return <li key={index} 
-                                    onMouseOver={()=>{mouseOver(item.id)}} 
-                                    onClick={()=>{manuClick(item.id)}} 
-                                    className={styles.subManu}>
-                                    <Link href={item.subTitle[0].id ? `/${item.id}/${item.subTitle[0].id}`:`/${item.id}`}
-                                          className={item.id === activeManu ? styles.active:''}>
-                                        {item.title}
-                                    </Link>
-                                    {title === item.id ? 
-                                    <ul>
-                                    {item.subTitle.map((i,index) => {
-                                        return <li key={index}>
-                                            <Link href={i.id === null ? `/${item.id}`:`/${item.id}/${i.id}`} 
-                                                    className={styles.subLink}>
-                                                {i.manu}
-                                            </Link>
-                                            </li>
-                                    })}
-                                    </ul>:''}
-                                </li>
+                                   onMouseOver={()=>{manuMouseOver(manu.id)}}
+                                >
+                            {SubList.map((subItem,index)=>{
+                                console.log(subItem)
+                                if(subItem.id === manu.id){
+                                    return <Link href={subItem.sub[0].id ? `/${manu.id}/${subItem.sub[0].id}`:`/${manu.id}`} key={index}>{manu.title}</Link>
+                                }
+                            })}
+                            
+                            {title === 'e-coupon' ? null : 
+                            <SubManu 
+                            manu={manu} 
+                            SubList={SubList} 
+                            subRef={subRef} 
+                            title={title}
+                            mouseLeave={mouseLeave}
+                        />
+                            }
+                            
+                        </li>
                     })}
                 </ul>
             </nav>

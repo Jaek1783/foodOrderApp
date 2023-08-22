@@ -1,0 +1,71 @@
+.navContainer{
+    font-size:20px;
+    font-weight: 600;
+    font-family:'Noto sans KR';
+    display: flex;
+    padding:0 1rem;
+}
+.navContainer>li:nth-child(1) ul{
+    padding-left:270px;
+}
+.navContainer>li:nth-child(3) ul{
+    padding-left:420px;
+}
+.navContainer>li:nth-child(4) ul{
+    justify-content: center;
+    padding-right: 110px;
+}
+.navContainer>li:nth-child(5) ul{
+    justify-content: center;
+    padding-left: 60px;
+}
+.navContainer>li>ul{
+    display: flex;
+    font-weight: normal;
+}
+.navContainer>li>a{
+    padding:2rem 1rem;
+}
+.navContainer>li>a:hover{
+    cursor: pointer;
+    border-bottom:1px solid #d21c1c ;
+}
+.navManu>ul{
+    width:100%;
+    background-color: antiquewhite;
+    position:absolute;
+    font-size:1rem;
+    font-weight:500;
+    display: flex;
+}
+.navManu>ul>li{
+    padding:2.5rem;
+    padding-left:0;
+    display: none;
+}
+.navManu:hover>ul>li{
+    display: block;
+}
+.navManu>ul>li>ul{
+    display:flex;
+    background-color: antiquewhite;
+}
+.navManu>ul>li>ul>li{
+    padding:2.5rem;
+}
+.navManu>a{
+    padding:0 1rem;
+}
+.active{
+    border-bottom:1px solid #d21c1c ;
+}
+/* subLink */
+
+.subLink:hover{
+    font-weight:bold;
+    color:#d21c1c;
+}
+
+.active{
+    border-bottom: 1px solid #d21c1c;
+}
