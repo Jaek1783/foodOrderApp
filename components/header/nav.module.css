@@ -5,6 +5,13 @@
     display: flex;
     padding:0 1rem;
 }
+.navContainer>li{
+    padding:2rem 0;
+}
+.navContainer>li:hover{
+    cursor: pointer;
+    border-bottom:1px solid #d21c1c ;
+}
 .navContainer>li:nth-child(1) ul{
     padding-left:270px;
 }
@@ -26,13 +33,9 @@
 .navContainer>li>a{
     padding:2rem 1rem;
 }
-.navContainer>li>a:hover{
-    cursor: pointer;
-    border-bottom:1px solid #d21c1c ;
-}
+
 .navManu>ul{
     width:100%;
-    background-color: antiquewhite;
     position:absolute;
     font-size:1rem;
     font-weight:500;
@@ -48,7 +51,6 @@
 }
 .navManu>ul>li>ul{
     display:flex;
-    background-color: antiquewhite;
 }
 .navManu>ul>li>ul>li{
     padding:2.5rem;
@@ -59,13 +61,15 @@
 .active{
     border-bottom:1px solid #d21c1c ;
 }
-/* subLink */
 
-.subLink:hover{
-    font-weight:bold;
-    color:#d21c1c;
-}
+/* 반응형웹사이트 */
 
-.active{
-    border-bottom: 1px solid #d21c1c;
+@media screen and (max-width: 1280px) {
+    .navContainer{
+        font-size:17px;
+        font-weight: 600;
+        font-family:'Noto sans KR';
+        display: flex;
+        padding:0 1rem;
+    }
 }

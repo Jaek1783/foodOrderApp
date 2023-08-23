@@ -3,10 +3,11 @@
     /* height:100px; */
     background-color: #fff;
     position:absolute;
-    top:90px;
+    top:89px;
     left:0;
     z-index: 9999;
     /* display:none; */
+    border-top:.5px solid #c0c0c0;
 }
 .subManuContainer>ul{
     display:flex;

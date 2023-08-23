@@ -1,3 +1,6 @@
+.headerUserManuList{
+    padding-top:1.7rem;
+}
 .headerUserManuList>ul>li:nth-child(2){
     position: relative;
 }

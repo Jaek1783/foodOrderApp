@@ -3,7 +3,6 @@ import Layout from '../components/Layout/layout';
 import '../styles/globals.css';
 import React from 'react';
 import type {AppProps} from 'next/app';
-import MyContext from '../store/context';
 import { store } from '../store/store';
 import {Provider} from 'react-redux';
 const MyApp = ({Component, pageProps}:AppProps) => {
