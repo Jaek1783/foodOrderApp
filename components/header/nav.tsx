@@ -1,44 +1,58 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from './nav.module.css'
+import styles from './nav.module.css';
 import SubManu from '../Layout/sub-manu';
-import {useRef} from 'react';
-const Navigation = ({title,setTitle,activeManu, setActiveManu, ManuList, SubList})=>{
-    return <nav className={styles.nav}>
-                <ul className={styles.navContainer}>
-                    {ManuList.map((manu,index)=>{
-                        // if(manu.id === '')
-                        const subRef = useRef(null);
-                        const manuMouseOver = (id)=>{
-                            setTitle(id)
-                            // subRef.current.style.display='block'
-                        }
-                        const mouseLeave = ()=>{
-                            setTitle('main');
-                            subRef.current.style.display='none'
-                        }
-                        return <li key={index} 
-                                   onMouseOver={()=>{manuMouseOver(manu.id)}}
-                                >
-                            {SubList.map((subItem,index)=>{
-                                console.log(subItem)
-                                if(subItem.id === manu.id){
-                                    return <Link href={subItem.sub[0].id ? `/${manu.id}/${subItem.sub[0].id}`:`/${manu.id}`} key={index}>{manu.title}</Link>
-                                }
-                            })}
-                            
-                            {title === 'e-coupon' ? null : 
-                            <SubManu 
-                            manu={manu} 
-                            SubList={SubList} 
-                            subRef={subRef} 
-                            title={title}
-                            mouseLeave={mouseLeave}
-                        />
-                            }
-                            
-                        </li>
-                    })}
-                </ul>
-            </nav>
+
+const Navigation = ({ ManuList, SubList }) => {
+  const [activeTitle, setActiveTitle] = useState('main');
+  const [activeSubMenuId, setActiveSubMenuId] = useState(null);
+
+  const handleManuMouseOver = (id) => {
+    setActiveTitle(id);
+    setActiveSubMenuId(id);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveTitle('main');
+    setActiveSubMenuId(null);
+  };
+  return (
+    <nav className={styles.nav}>
+      <ul className={styles.navContainer}>
+        {ManuList.map((manu, index) => (
+          <li
+            key={index}
+            onMouseOver={() => handleManuMouseOver(manu.id)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {SubList.map((subItem, subIndex) => {
+              if (subItem.id === manu.id) {
+                const subLinkId = subItem.sub[0]?.id || manu.id;
+                const isActiveSubMenu = activeSubMenuId === manu.id;
+
+                return (
+                  <Link
+                    href={manu.id === 'e-coupon' ? `/${manu.id}`:`/${manu.id}/${subLinkId}`}
+                    key={subIndex}
+                    className={isActiveSubMenu ? styles.activeLink : ''}
+                  >
+                    {manu.title}
+                  </Link>
+                );
+              }
+            })}
+
+            {activeTitle !== 'e-coupon' && (
+              <SubManu
+                manu={manu}
+                SubList={SubList}
+                showSubMenu={activeSubMenuId === manu.id}
+              />
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
 };
 export default Navigation;

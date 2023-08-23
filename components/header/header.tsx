@@ -6,24 +6,18 @@ import AddressButton from "../header/address-button";
 import Navigation from "./nav";
 import {useRef,useState } from "react";
 const Header = ({setTitle, title, ManuList, SubList})=>{    
-    const [activeManu, setActiveManu] = useState('main');
     const headerRef = useRef(null);
     const spanRef = useRef(null);
     const navRef = null;
     const logoClick = ()=>{
-        setActiveManu('main')
         setTitle('main')
     };
     const logoHover = ()=>{
         setTitle('main')
     }
-    const mouseLeave = ()=>{
-        // headerRef.current.style.height=87+'px';
-    };
     console.log(title)
     return  <header className={styles.headerContainer} 
                     ref={headerRef} 
-                    onMouseLeave={()=>{mouseLeave()}}
                     >
                 <h1  onClick={logoClick}
                      onMouseOver={logoHover}>
@@ -32,10 +26,8 @@ const Header = ({setTitle, title, ManuList, SubList})=>{
                     </Link>
                 </h1>
                 <Navigation  
-                    setTitle={setTitle} 
-                    title={title} 
-                    activeManu={activeManu}
-                    setActiveManu={setActiveManu}
+                    // setTitle={setTitle} 
+                    // title={title} 
                     ManuList={ManuList}
                     SubList={SubList}
                 />
