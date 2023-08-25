@@ -4,14 +4,10 @@ import Link from "next/link";
 import IconHaeder from "../Layout/iconHaeder";
 import AddressButton from "../header/address-button";
 import Navigation from "./nav";
-import {useRef,useState } from "react";
-import SubManu from "../Layout/sub-manu";
+import {useRef, useState} from "react";
 const Header = ({setTitle, title, ManuList, SubList})=>{
     const spanRef = useRef(null);
-    const leaveHeader = ()=>{
-        setTitle('main')
-    }
-    
+    const [activePage, setActivePage] = useState<String>('main');
     return  <header className={styles.headerContainer}>
                 <h1>
                     <Link href='/'>
@@ -23,6 +19,8 @@ const Header = ({setTitle, title, ManuList, SubList})=>{
                     SubList={SubList}
                     title={title}
                     setTitle={setTitle}
+                    activePage={activePage}
+                    setActivePage={setActivePage}
                 />
                 <div className={styles.sideManu}>
                     <AddressButton/>

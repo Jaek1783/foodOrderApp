@@ -1,0 +1,8 @@
+.headerBtn{
+    display: flex;
+    align-items: center;
+    font-size:1.2rem;
+}
+.headerBtn>span{
+    padding:0 .5rem;
+}

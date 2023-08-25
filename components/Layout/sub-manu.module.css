@@ -13,7 +13,7 @@
     height:100%;
 }
 .inner>ul{
-    margin-left:250px;
+    margin-left:200px;
 }
 .inner>ul:nth-child(3){
     margin-left:465px;
@@ -25,6 +25,9 @@
     margin-left:770px;
 }
 .inner>ul>li{
-    padding:2rem 1rem;
+    padding:2rem;
     display: inline-block;
+}
+.inner>ul>li>a:hover{
+    color:#c8102e;
 }
