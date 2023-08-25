@@ -1,75 +1,26 @@
-.navContainer{
-    font-size:20px;
-    font-weight: 600;
-    font-family:'Noto sans KR';
-    display: flex;
-    padding:0 1rem;
-}
-.navContainer>li{
-    padding:2rem 0;
-}
-.navContainer>li:hover{
-    cursor: pointer;
-    border-bottom:1px solid #d21c1c ;
-}
-.navContainer>li:nth-child(1) ul{
-    padding-left:270px;
-}
-.navContainer>li:nth-child(3) ul{
-    padding-left:420px;
-}
-.navContainer>li:nth-child(4) ul{
-    justify-content: center;
-    padding-right: 110px;
-}
-.navContainer>li:nth-child(5) ul{
-    justify-content: center;
-    padding-left: 60px;
-}
-.navContainer>li>ul{
-    display: flex;
-    font-weight: normal;
-}
-.navContainer>li>a{
-    padding:2rem 1rem;
-}
-
-.navManu>ul{
-    width:100%;
-    position:absolute;
-    font-size:1rem;
-    font-weight:500;
-    display: flex;
-}
-.navManu>ul>li{
-    padding:2.5rem;
-    padding-left:0;
-    display: none;
-}
-.navManu:hover>ul>li{
-    display: block;
-}
-.navManu>ul>li>ul{
+.navContainer>ul{
     display:flex;
+    height:101px;
+    font-size:1.2rem;
 }
-.navManu>ul>li>ul>li{
-    padding:2.5rem;
+.navContainer>ul>li{
+    font-weight: 600;
+    
 }
-.navManu>a{
-    padding:0 1rem;
+.navContainer>ul>li>a{
+    height:101px;
+    display: block;
+    position: relative;
+    padding:35px 30px 0 30px;
 }
-.active{
-    border-bottom:1px solid #d21c1c ;
-}
+/* active::after */
 
-/* 반응형웹사이트 */
-
-@media screen and (max-width: 1280px) {
-    .navContainer{
-        font-size:17px;
-        font-weight: 600;
-        font-family:'Noto sans KR';
-        display: flex;
-        padding:0 1rem;
-    }
+.active::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #c8102e;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }

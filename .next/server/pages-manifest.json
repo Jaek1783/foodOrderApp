@@ -1,12 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/404": "pages/404.html",
-  "/[slug]": "pages/[slug].html",
-  "/cart": "pages/cart.html",
-  "/cs/[slug]": "pages/cs/[slug].html",
-  "/": "pages/index.html",
-  "/manu/[slug]": "pages/manu/[slug].html",
-  "/misc/[slug]": "pages/misc/[slug].html",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/manu/[slug]": "pages/manu/[slug].js"
 }
