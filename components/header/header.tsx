@@ -10,7 +10,9 @@ const Header = ({setTitle, title, ManuList, SubList})=>{
     const [activePage, setActivePage] = useState<String>('main');
     return  <header className={styles.headerContainer}>
                 <h1>
-                    <Link href='/'>
+                    <Link href='/'
+                          onClick={()=>{setActivePage('main')}}
+                    >
                         <Image src={'/logo/headerLogo.png'} alt={`로고 이미지`} width={175} height={35} priority/>
                     </Link>
                 </h1>

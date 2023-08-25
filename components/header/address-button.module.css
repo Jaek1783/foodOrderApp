@@ -6,3 +6,16 @@
 .headerBtn>span{
     padding:0 .5rem;
 }
+
+/* 반응형웹사이트 */
+@media screen and (min-width: 851px) and (max-width:1280px){
+    .headerBtn{
+        display: none;
+    };
+};
+
+@media screen and (max-width:850px){
+    .headerBtn{
+        display: flex;
+    }
+};

@@ -10,7 +10,7 @@ const SubManu = ({SubList, title, setActivePage})=>{
                     {subItem.sub.map((item, index)=>{
                        return item.manu ?
                          <li key={index}>
-                            <Link href={`/${subItem.id}/${item.id}`} onClick={()=>{setActivePage(subItem.id)}}>{item.manu}</Link>
+                            <Link href={item.id ? `/${subItem.id}/${item.id}`:`/${subItem.id}`} onClick={()=>{setActivePage(subItem.id)}}>{item.manu}</Link>
                         </li> : null
                     })}
                 </ul>
