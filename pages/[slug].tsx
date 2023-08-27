@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import LoginPage from "../components/UI/login/login";
+import LoginPage from "../pages/sign/login";
 const SubPage = ()=>{
     const router = useRouter();
     const slug = router.query.slug
@@ -7,6 +7,7 @@ const SubPage = ()=>{
     let contents;
     if(slug === 'e-coupon'){
         alert('로그인 후 이용 가능 합니다.');
+        router.push(`/sign/login`)
         contents = <LoginPage/>
     }
     return <>

@@ -10,9 +10,8 @@
     position: absolute;
 }
 .slidesContainer>ul>li{
-    width:1900px;
+    width:100%;
     height:calc(800px - 7.5rem);
-    background-size: cover;
 }
 .arrowBtn{
     width:100%;

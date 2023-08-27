@@ -1,11 +1,7 @@
 import styles from './banner.module.css';
 import Image from 'next/image';
 import LoginContainer from "./login";
-interface bannerListType {
-    id : string,
-    title : string,
-    src : string
-}
+import { bannerListType } from '../../../../utill/types';
 const Banner = ()=>{
     const bannerList : bannerListType [] = [
         {id : 'b1', title : '배달주문', src : '/icon/delivery.png'},

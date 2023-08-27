@@ -12,3 +12,9 @@ export interface SubType {
         {id?: string, manu?: string}
     ]
 }
+
+export interface bannerListType {
+    id : string,
+    title : string,
+    src : string
+}

@@ -77,7 +77,8 @@ const prevBtnClickHandler = (e)=>{
                     return <li
                                 key={index}
                                 style={{
-                                background: `no-repeat -200px 0 url(${list.src})`
+                                background: `no-repeat 0 0 url(${list.src})`,
+                                backgroundSize:`cover`,
                                 }}
                             >
                         </li>

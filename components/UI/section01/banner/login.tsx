@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import styles from './login.module.css'
-
+import { useRouter } from 'next/router';
 const LoginContainer = ()=>{
+    const router = useRouter();
+    const loginPage = ()=>{
+        router.push(`/sign/login`);
+    };
     return <div className={styles.loginContainer}>
         <ul>
             <li>
@@ -14,7 +18,7 @@ const LoginContainer = ()=>{
             </li>
             <li>
                 <div>    
-                    <button className={styles.btn}>
+                    <button className={styles.btn} onClick={()=>{loginPage()}}>
                         <span className={styles.t1}>로그인/회원가입</span>
                     </button>
                     <button className={styles.btn}>
