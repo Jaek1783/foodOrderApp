@@ -13,6 +13,7 @@
     height:100%;
 }
 .inner>ul{
+    width:100%;
     margin-left:200px;
 }
 .inner>ul:nth-child(3){
